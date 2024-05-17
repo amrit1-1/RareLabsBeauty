@@ -1,0 +1,69 @@
+.App {
+  background-color: rgb(245, 235, 220);
+  color: rgb(73, 62, 44);
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.promo-header {
+  text-align: center;
+  background-color: rgb(73, 62, 44);
+  color: rgb(245, 235, 220);
+  position: sticky;
+}
+
+.main-header {
+  padding: 15px;
+}
+
+.slogan {
+  color: rgb(150, 141, 127);
+}
+
+.header-logo {
+  height: 70px;
+  display: flex;
+  justify-content: left;
+}
+
+.footer-logo {
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  margin-top: 30px;
+}
+
+.footer-title {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.nav {
+  justify-content: right;
+  padding: 5px;
+  color: rgb(73, 62, 44);
+}
+
+.ig-link {
+  color: rgb(73, 62, 44);
+}
+
+.page {
+  background-color: white;
+}
+
+.page-title{
+  padding: 20px;
+}
+
+.copywrite {
+  font-size:xx-small;
+  text-align: left;
+}
+
+.footer {
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background-color: rgb(245, 235, 220);
+}
