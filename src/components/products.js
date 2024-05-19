@@ -17,7 +17,7 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
 import { useState, useEffect } from 'react';
 
-// This is an array of the different product objects I created.
+// This is an array of the different product objects to be displayed in the "products" page
 const theProducts = [
     {
         id: 1,
@@ -152,16 +152,20 @@ const theProducts = [
 
 export default function Products() {
 
+    // Grabbing dispatch in order to use the "add to cart" functionality
     const dispatch = useDispatch()
 
+    // This is in charge of selecting the right colour to the "selectedColour" property in the object
     const [selectedOption, setSelectedOption] = useState("");
 
+    // Once the user clicks 'add to cart' this function is triggered which assigns the selected colour and adds the product to the cart.
     const changingColour = (item) => {
         (item).selectedColour = selectedOption;
         dispatch(addToCart((item)));
         setSelectedOption("");
     }
 
+    // This maps all the products in the array I created above
     const displayingProducts = theProducts.map((theProduct) => 
 
         <Col>
@@ -170,7 +174,8 @@ export default function Products() {
             <Card.Body>
                 <Card.Title>{theProduct.name} - £{theProduct.price}</Card.Title>
                 <Card.Text>{theProduct.description}</Card.Text>
-                    <form>  
+                {/* This dropdown lets the user pick from 3 colour choices for each product*/}
+                    <form>
                         <select 
                         className='select' 
                         required
@@ -182,6 +187,7 @@ export default function Products() {
                             <option value={theProduct.colour[2]}>{theProduct.colour[2]}</option>
                         </select>
                     </form>
+                    {/* Add to cart wont be enabled until the user selects a colour choice*/}
                     <Button
                     disabled={selectedOption === "" ? true: false}
                     className='add-to-cart' 
@@ -192,6 +198,7 @@ export default function Products() {
         </Col>
     );
 
+    // Now we return a page that contains all the mapped products after a title called 'products'
     return (
         <div>
             <h2 className="page-title">Products</h2>

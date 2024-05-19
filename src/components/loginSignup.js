@@ -2,23 +2,20 @@ import React, { useRef, useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { NameContext, LogInContext } from "../App";
 
-const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{5,23}$/;
-const PWD_REGEX = /^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const FNAME_REGEX = /^[a-zA-Z]{3,15}$/;
-const SNAME_REGEX = /^[a-zA-Z]{3,15}$/;
-const EMAIL_REGEX = /^(?=.{1,81}$)[\w\.-]+@[\w\.-]+\.\w{2,4}$/;
+// This info ensures the fields are validated with speciic requirements
+const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{5,23}$/; // for the username
+const PWD_REGEX = /^(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/; // for the password
+const FNAME_REGEX = /^[a-zA-Z]{3,15}$/; // for the first name
+const SNAME_REGEX = /^[a-zA-Z]{3,15}$/; // for the surname
+const EMAIL_REGEX = /^(?=.{1,81}$)[\w\.-]+@[\w\.-]+\.\w{2,4}$/; // for the email
 
 const LoginSignup = () => {
     // Autofocuses to user field or an error field if there's an error
-    const userRef = useRef();
     const errRef = useRef();
 
-    // Tied to user input
-    const [user, setUser] = useState("");
-    // Tied to whether the name validates or not
-    const [validName, setValidName] = useState(false);
-    // Whether we have focus on the input field or not
-    const [userFocus, setUserFocus] = useState(false);
+    const [user, setUser] = useState("");  // Tied to user input
+    const [validName, setValidName] = useState(false); // Tied to whether the name validates or not
+    const [userFocus, setUserFocus] = useState(false); // Whether we have focus on the input field or not
 
     // Same for first name except grabs first name from context
     const value = useContext(NameContext);
@@ -111,6 +108,7 @@ const LoginSignup = () => {
 
     return (
         <>
+        {/* If the user is logged in, some info will appear about their rewards*/}
         {(loggedIn === "logged in") ? (
             <>
             <h1 className="welcome">Welcome, {fName}!</h1>
@@ -121,6 +119,7 @@ const LoginSignup = () => {
             </>
         ): null}
 
+        {/* If the user isn't logged in, then the "registration" element appears*/}
         {(loggedIn === "not logged in") ?(
             <div>
             {/*Displays error message*/}
@@ -271,6 +270,7 @@ const LoginSignup = () => {
         </div>
         ): null }
 
+        {/* If the login was unsuccessful, the following message appears with a link back to signing in*/}
         {(loggedIn === "invalid") ? (
             <>
             <h1 className="welcome">Not Found</h1>
@@ -279,6 +279,7 @@ const LoginSignup = () => {
             </>
         ): null}
 
+        {/* After the registration has happened, this 'sign in' page appears*/}
         {(loggedIn === "signing in") ? (
             <>
             <div>

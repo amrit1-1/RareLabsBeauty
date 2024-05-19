@@ -1,6 +1,7 @@
 import React from "react";
 import homepic from "../images/home-pic.png";
 
+// This function controls the home page element
 export default function Home() {
     return(
         <div className="page">

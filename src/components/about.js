@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
 import about from "../images/about.png";
 
-// This function returns the 'about' section with some text describing the company
+// This function returns the 'about' section with some text describing the company and some contact details
 export default function About() {
     return(
         <div className="page">

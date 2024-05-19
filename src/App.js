@@ -24,6 +24,7 @@ function App() {
 
   return (
     <div className="App">
+      {/*Ensuring we can retrieve the store for redux, the name and login status in all pages*/}
       <Provider store={store}>
         <NameContext.Provider value={[fName, setFName]}>
           <LogInContext.Provider value={[loggedIn, setLoggedIn]}>
