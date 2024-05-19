@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from "react-router-dom";
+import about from "../images/about.png";
 
 // This function returns the 'about' section with some text describing the company
 export default function About() {
@@ -12,7 +13,7 @@ export default function About() {
                 <h2 className="page-title">About</h2>
             </div>
             <Container>
-                <Row>
+                <Row className="about-box">
                     <Col>
                         <p>Founded on the principles of quality, innovation, and inclusivity, Rare Labs is committed to providing products that not only enhance your natural features but also empower you to express yourself freely and confidently.</p>
                     </Col>
@@ -21,14 +22,21 @@ export default function About() {
                     </Col>
                 </Row>
                 <Row>
-                    <h3 className="page-title">Contact Us</h3>
-                    <p>Need help finding the right shade? Want to book one of our F.C. artists for your event? Feel free to reach out to us:</p>
-                    <Col>
-                    <p>Email: rarelabs@beauty.com</p>
-                    </Col>
-                    <Col>
-                    <Link className="ig-link" to="https://www.instagram.com/rarebeauty/">Our Instagram Page</Link>
-                    </Col>
+                    <img className="about-pic" src={about} />
+                </Row>
+                <Row>
+                    <div className="contact">
+                        <h3 className="page-title">Contact Us</h3>
+                        <p>Need help finding the right shade? Want to book one of our artists for your event? Feel free to reach out to us:</p>
+                        <Row>
+                            <Col>
+                            <p>Email: rarelabs@beauty.com</p>
+                            </Col>
+                            <Col>
+                            <Link className="ig-link" to="https://www.instagram.com/rarebeauty/">Our Instagram Page</Link>
+                            </Col>
+                        </Row>
+                    </div>
                 </Row>
             </Container>
         </div>

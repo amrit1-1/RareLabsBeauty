@@ -40,6 +40,12 @@
 
 .nav {
   justify-content: right;
+  text-align: right;
+  padding: 5px;
+  color: rgb(73, 62, 44);
+}
+
+.nav2 {
   padding: 5px;
   color: rgb(73, 62, 44);
 }
@@ -53,7 +59,14 @@
 }
 
 .page-title{
-  padding: 20px;
+  padding: 30px;
+}
+
+.welcome {
+  border-top: 3px solid rgb(225, 216, 203);
+  margin-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 .copywrite {
@@ -62,8 +75,103 @@
 }
 
 .footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
   background-color: rgb(245, 235, 220);
+  padding: 30px;
+}
+
+.home-pic{
+  width: 100%;
+  height: auto;
+}
+
+.text-on-image {
+  text-align: center;
+  color: white;
+  position:absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 20%;
+}
+
+.about-pic {
+  height: 100%;
+  width: 100%;
+}
+
+.contact {
+  margin: 30px;
+  margin-bottom: 50px;
+}
+
+.about-box {
+  margin: 40px;
+}
+
+.button {
+  border: 0px;
+  border-radius: 15px;
+  background-color: rgb(245, 235, 220);
+  color:rgb(73, 62, 44);
+  padding: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.second-button {
+  border: 0px;
+  border-radius: 15px;
+  color: rgb(245, 235, 220);
+  background-color:rgb(73, 62, 44);
+  padding: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.explore {
+  color:rgb(73, 62, 44);
+  font-size: larger;
+}
+
+.disabled-button {
+  border: 0px;
+  border-radius: 15px;
+  background-color: rgb(245, 235, 220);
+  color:rgb(73, 62, 44);
+  padding: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin: 20px;
+  font-weight: bold;
+  opacity: 50%;
+}
+
+.list {
+  text-align: left;
+}
+
+.select {
+  border: 2px solid rgb(73, 62, 44);
+  border-radius: 15px;
+  background-color: white;
+  color:rgb(73, 62, 44);
+  padding: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  border: 0px;
+  border-radius: 15px;
+  background-color: rgb(245, 235, 220);
+  color:rgb(73, 62, 44);
+  padding: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  font-weight: bold;
+  margin-top: 15px;
 }

@@ -20,6 +20,22 @@ export default function Footer() {
                         <Link className="ig-link" to="https://www.instagram.com/rarebeauty/">Send a message on Instagram</Link>
                         <p>Email: rarelabs@beauty.com</p>
                     </Col>
+                    <Col xs={2}>
+                        <nav>
+                            <div>
+                            <Link className="nav2" to="/">Home</Link>
+                            </div>
+                            <div>
+                            <Link className="nav2" to="/about">About</Link>
+                            </div>
+                            <div>
+                            <Link className="nav2" to="/rewards">Your Rewards</Link>
+                            </div>
+                            <div>
+                            <Link className="nav2" to="/shop">Shop</Link>
+                            </div>
+                        </nav>
+                    </Col>
                 </Row>
             </Container>
         </div>
